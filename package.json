@@ -5,7 +5,8 @@
   "scripts": {
     "start": "func start",
     "test": "echo \"No tests yet...\"",
-    "it": "docker-compose up -d && ./scripts/wait-for-it.sh 0.0.0.0:10000 && echo 'running tests' && docker-compose down"
+    "it": "docker-compose up -d && ./scripts/wait-for-it.sh 0.0.0.0:10000 && echo 'running tests' && docker-compose down",
+    "dist": "zip -r dist.zip package.json host.json node_modules HealthCheckFunction"
   },
   "dependencies": {
     "durable-functions": "^1.5.3",
